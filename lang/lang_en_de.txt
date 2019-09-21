@@ -62,7 +62,7 @@
 "Auto home"
 "Startposition"
 
-#MSG_AUTOLOAD_FILAMENT c=17
+#MSG_AUTOLOAD_FILAMENT c=18
 "AutoLoad filament"
 "AutoLaden Filament"
 
@@ -810,11 +810,11 @@
 "Print aborted"
 "Druck abgebrochen"
 
-#
+# c=20 r=1
 "Preheating to load"
 "Heizen zum Laden"
 
-#
+# c=20 r=1
 "Preheating to unload"
 "Heizen zum Entladen"
 
@@ -1383,11 +1383,11 @@
 "PINDA:"
 "\x00"
 
-#
+# c=20 r=1
 "Preheating to cut"
 "Heizen zum Schnitt"
 
-#
+# c=20 r=1
 "Preheating to eject"
 "Heizen zum Auswurf"
 
