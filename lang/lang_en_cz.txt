@@ -62,7 +62,7 @@
 "Auto home"
 "\x00"
 
-#MSG_AUTOLOAD_FILAMENT c=17
+#MSG_AUTOLOAD_FILAMENT c=18
 "AutoLoad filament"
 "AutoZavedeni fil."
 
@@ -810,11 +810,11 @@
 "Print aborted"
 "Tisk prerusen"
 
-#
+# c=20 r=1
 "Preheating to load"
 "Predehrev k zavedeni"
 
-#
+# c=20 r=1
 "Preheating to unload"
 "Predehrev k vyjmuti"
 
@@ -1382,11 +1382,11 @@
 "PINDA:"
 "\x00"
 
-#
+# c=20 r=1
 "Preheating to cut"
 "Predehrev k ustrizeni"
 
-#
+# c=20 r=1
 "Preheating to eject"
 "Predehrev k vysunuti"
 

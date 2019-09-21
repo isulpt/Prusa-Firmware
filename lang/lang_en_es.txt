@@ -62,7 +62,7 @@
 "Auto home"
 "Llevar al origen"
 
-#MSG_AUTOLOAD_FILAMENT c=17
+#MSG_AUTOLOAD_FILAMENT c=18
 "AutoLoad filament"
 "Carga automatica de filamento"
 
@@ -810,11 +810,11 @@
 "Print aborted"
 "Impresion cancelada"
 
-#
+# c=20 r=1
 "Preheating to load"
 "Precalentar para cargar"
 
-#
+# c=20 r=1
 "Preheating to unload"
 "Precalentar para descargar"
 
@@ -1382,11 +1382,11 @@
 "PINDA:"
 "PINDA:"
 
-#
+# c=20 r=1
 "Preheating to cut"
 "Precalentando para laminar"
 
-#
+# c=20 r=1
 "Preheating to eject"
 "Precalentar para expulsar"
 
