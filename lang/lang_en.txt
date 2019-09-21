@@ -46,7 +46,7 @@
 #MSG_AUTO_HOME
 "Auto home"
 
-#MSG_AUTOLOAD_FILAMENT c=17
+#MSG_AUTOLOAD_FILAMENT c=18
 "AutoLoad filament"
 
 #MSG_AUTOLOADING_ONLY_IF_FSENS_ON c=20 r=4
@@ -607,10 +607,10 @@
 #MSG_PRINT_ABORTED c=20
 "Print aborted"
 
-#
+# c=20 r=1
 "Preheating to load"
 
-#
+# c=20 r=1
 "Preheating to unload"
 
 #MSG_SELFTEST_PRINT_FAN_SPEED c=18
@@ -1036,10 +1036,10 @@
 #
 "PINDA:"
 
-#
+# c=20 r=1
 "Preheating to cut"
 
-#
+# c=20 r=1
 "Preheating to eject"
 
 #
