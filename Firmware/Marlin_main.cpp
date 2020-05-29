@@ -2876,16 +2876,16 @@ bool gcode_M45(bool onlyZ, int8_t verbosity_level)
 		
 		lcd_show_fullscreen_message_and_wait_P(_T(MSG_CONFIRM_NOZZLE_CLEAN));
 		if(onlyZ){
-			lcd_display_message_fullscreen_P(_T(MSG_MEASURE_BED_REFERENCE_HEIGHT_LINE1));
+			lcd_display_message_fullscreen_P(_T(MSG_BED_MEASURE_REFERENCE_HEIGHT_LINE1));
 			lcd_set_cursor(0, 3);
 			lcd_print(1);
-			lcd_puts_P(_T(MSG_MEASURE_BED_REFERENCE_HEIGHT_LINE2));
+			lcd_puts_P(_T(MSG_BED_MEASURE_REFERENCE_HEIGHT_LINE2));
 		}else{
 			//lcd_show_fullscreen_message_and_wait_P(_T(MSG_PAPER));
-			lcd_display_message_fullscreen_P(_T(MSG_FIND_BED_OFFSET_AND_SKEW_LINE1));
+			lcd_display_message_fullscreen_P(_T(MSG_BED_FIND_OFFSET_AND_SKEW_LINE1));
 			lcd_set_cursor(0, 2);
 			lcd_print(1);
-			lcd_puts_P(_T(MSG_FIND_BED_OFFSET_AND_SKEW_LINE2));
+			lcd_puts_P(_T(MSG_BED_FIND_OFFSET_AND_SKEW_LINE2));
 		}
 
 		refresh_cmd_timeout();
@@ -2904,10 +2904,10 @@ bool gcode_M45(bool onlyZ, int8_t verbosity_level)
 			#endif //STEEL_SHEET
 		    lcd_show_fullscreen_message_and_wait_P(_T(MSG_PAPER));
 			KEEPALIVE_STATE(IN_HANDLER);
-			lcd_display_message_fullscreen_P(_T(MSG_FIND_BED_OFFSET_AND_SKEW_LINE1));
+			lcd_display_message_fullscreen_P(_T(MSG_BED_FIND_OFFSET_AND_SKEW_LINE1));
 			lcd_set_cursor(0, 2);
 			lcd_print(1);
-			lcd_puts_P(_T(MSG_FIND_BED_OFFSET_AND_SKEW_LINE2));
+			lcd_puts_P(_T(MSG_BED_FIND_OFFSET_AND_SKEW_LINE2));
 		}
 			
 		bool endstops_enabled  = enable_endstops(false);
@@ -3226,7 +3226,7 @@ void gcode_M701()
 		fsensor_oq_meassure_start(40);
 #endif //FSENSOR_QUALITY
 
-		lcd_setstatuspgm(_T(MSG_LOADING_FILAMENT));
+		lcd_setstatuspgm(_T(MSG_FILAMENT_LOADING));
 		current_position[E_AXIS] += 40;
 		plan_buffer_line_curposXYZE(400 / 60, active_extruder); //fast sequence
 		st_synchronize();
@@ -4025,7 +4025,7 @@ eeprom_update_word((uint16_t*)EEPROM_NOZZLE_DIAMETER_uM,0xFFFF);
                         disable_e2();
                         _delay(100);
                         
-                        //LCD_ALERTMESSAGEPGM(_T(MSG_FILAMENTCHANGE));
+                        //LCD_ALERTMESSAGEPGM(_T(MSG_FILAMENT_CHANGE));
                         uint8_t cnt=0;
                         int counterBeep = 0;
                         lcd_wait_interact();
@@ -8606,7 +8606,7 @@ Sigma_Exit:
 	  else if (*(strchr_pointer + index) == 'x'){ //load to bondtech gears; if mmu is not present do nothing
 		if (mmu_enabled)
 		{
-			tmp_extruder = choose_menu_P(_T(MSG_CHOOSE_FILAMENT), _T(MSG_FILAMENT));
+			tmp_extruder = choose_menu_P(_T(MSG_FILAMENT_CHOOSE), _T(MSG_FILAMENT));
 			if ((tmp_extruder == mmu_extruder) && mmu_fil_loaded) //dont execute the same T-code twice in a row
 			{
 				printf_P(PSTR("Duplicate T-code ignored.\n"));
@@ -8633,11 +8633,11 @@ Sigma_Exit:
           {
               if(mmu_enabled)
               {
-                  tmp_extruder = choose_menu_P(_T(MSG_CHOOSE_FILAMENT), _T(MSG_FILAMENT));
+                  tmp_extruder = choose_menu_P(_T(MSG_FILAMENT_CHOOSE), _T(MSG_FILAMENT));
                   load_to_nozzle = true;
               } else
               {
-                  tmp_extruder = choose_menu_P(_T(MSG_CHOOSE_EXTRUDER), _T(MSG_EXTRUDER));
+                  tmp_extruder = choose_menu_P(_T(MSG_EXTRUDER_CHOOSE), _T(MSG_EXTRUDER));
               }
           }
           else {

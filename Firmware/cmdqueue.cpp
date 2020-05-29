@@ -294,7 +294,7 @@ void enquecommand(const char *cmd, bool from_progmem)
         else
             strcpy(cmdbuffer + bufindw + CMDHDRSIZE, cmd);
         SERIAL_ECHO_START;
-        SERIAL_ECHORPGM(MSG_Enqueing);
+        SERIAL_ECHORPGM(MSG_ENQUEING);
         SERIAL_ECHO(cmdbuffer + bufindw + CMDHDRSIZE);
         SERIAL_ECHOLNPGM("\"");
         bufindw += len + (CMDHDRSIZE + 1);
@@ -306,7 +306,7 @@ void enquecommand(const char *cmd, bool from_progmem)
 #endif /* CMDBUFFER_DEBUG */
     } else {
         SERIAL_ERROR_START;
-        SERIAL_ECHORPGM(MSG_Enqueing);
+        SERIAL_ECHORPGM(MSG_ENQUEING);
         if (from_progmem)
             SERIAL_PROTOCOLRPGM(cmd);
         else

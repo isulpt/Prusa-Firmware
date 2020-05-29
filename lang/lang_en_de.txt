@@ -14,7 +14,7 @@
 " of 4"
 " von 4"
 
-#MSG_MEASURE_BED_REFERENCE_HEIGHT_LINE2 c=14
+#MSG_BED_MEASURE_REFERENCE_HEIGHT_LINE2 c=14
 " of 9"
 " von 9"
 
@@ -190,7 +190,7 @@
 "Copy selected language?"
 "Gewaehlte Sprache kopieren?"
 
-#MSG_CRASHDETECT c=13
+#MSG_CRASH_DETECT c=13
 "Crash det."
 "Crash Erk."
 
@@ -238,7 +238,7 @@
 "E-correct:"
 "E-Korrektur:"
 
-#MSG_EJECT_FILAMENT c=17 r=1
+#MSG_FILAMENT_EJECT c=17 r=1
 "Eject filament"
 "Filamentauswurf"
 
@@ -262,7 +262,7 @@
 "Error - static memory has been overwritten"
 "Fehler - statischer Speicher wurde ueberschrieben"
 
-#MSG_CUT_FILAMENT c=16
+#MSG_FILAMENT_CUT c=16
 "Cut filament"
 "Fil. schneiden"
 
@@ -422,7 +422,7 @@
 "howto.prusa3d.com"
 "\x00"
 
-#MSG_FILAMENTCHANGE
+#MSG_FILAMENT_CHANGE
 "Change filament"
 "Filament-Wechsel"
 
@@ -462,11 +462,11 @@
 "Checking Z axis  "
 "Pruefe Z Achse "
 
-#MSG_CHOOSE_EXTRUDER c=20 r=1
+#MSG_EXTRUDER_CHOOSE c=20 r=1
 "Choose extruder:"
 "Extruder waehlen:"
 
-#MSG_CHOOSE_FILAMENT c=20 r=1
+#MSG_FILAMENT_CHOOSE c=20 r=1
 "Choose filament:"
 "Waehle Filament:"
 
@@ -534,7 +534,7 @@
 "Insert the filament (do not load it) into the extruder and then press the knob."
 "Stecken Sie das Filament (nicht laden) in den Extruder und druecken Sie dann den Knopf."
 
-#MSG_LOAD_FILAMENT c=17
+#MSG_FILAMENT_LOAD c=17
 "Load filament"
 "Filament laden"
 
@@ -542,7 +542,7 @@
 "Loading color"
 "Lade Farbe"
 
-#MSG_LOADING_FILAMENT c=20
+#MSG_FILAMENT_LOADING c=20
 "Loading filament"
 "Filament laedt"
 
@@ -570,7 +570,7 @@
 "Level Dimmed"
 "Dimmwert"
 
-#MSG_MEASURE_BED_REFERENCE_HEIGHT_LINE1 c=60
+#MSG_BED_MEASURE_REFERENCE_HEIGHT_LINE1 c=60
 "Measuring reference height of calibration point"
 "Messen der Referenzhoehe des Kalibrierpunktes"
 
@@ -770,7 +770,7 @@
 "Please press the knob to unload filament"
 "Bitte druecken Sie den Knopf um das Filament zu entladen."
 
-#MSG_PULL_OUT_FILAMENT c=20 r=4
+#MSG_FILAMENT_PULL_OUT c=20 r=4
 "Please pull out filament immediately"
 "Bitte ziehen Sie das Filament sofort heraus"
 
@@ -846,7 +846,7 @@
 "Print fan:"
 "Druckvent.:"
 
-#MSG_CARD_MENU
+#MSG_SD_CARD_MENU
 "Print from SD"
 "Drucken von SD"
 
@@ -938,7 +938,7 @@
 "SD card"
 "SD Karte"
 
-#MSG_TOSHIBA_FLASH_AIR_COMPATIBILITY
+#MSG_SD_TOSHIBA_AIR
 "FlashAir"
 "\x00"
 
@@ -946,7 +946,7 @@
 "Right"
 "Rechts"
 
-#MSG_FIND_BED_OFFSET_AND_SKEW_LINE1 c=60
+#MSG_BED_FIND_OFFSET_AND_SKEW_LINE1 c=60
 "Searching bed calibration point"
 "Suche Bett Kalibrierpunkt"
 
@@ -1014,7 +1014,7 @@
 "Some files will not be sorted. Max. No. of files in 1 folder for sorting is 100."
 "Einige Dateien wur- den nicht sortiert. Max. Dateien pro Verzeichnis = 100."
 
-#MSG_SORT
+#MSG_SD_SORT
 "Sort"
 "Sort."
 
@@ -1022,7 +1022,7 @@
 "None"
 "Ohne"
 
-#MSG_SORT_TIME
+#MSG_SD_SORT_TIME
 "Time"
 "Zeit"
 
@@ -1030,7 +1030,7 @@
 "Severe skew:"
 "Schwer.Schr:"
 
-#MSG_SORT_ALPHA
+#MSG_SD_SORT_ALPHA
 "Alphabet"
 "\x00"
 
@@ -1162,11 +1162,11 @@
 "to unload filament"
 "Filament entladen"
 
-#MSG_UNLOAD_FILAMENT c=17
+#MSG_FILAMENT_UNLOAD c=17
 "Unload filament"
 "Filament entladen"
 
-#MSG_UNLOADING_FILAMENT c=20 r=1
+#MSG_FILAMENT_UNLOADING c=20 r=1
 "Unloading filament"
 "Filament auswerfen"
 

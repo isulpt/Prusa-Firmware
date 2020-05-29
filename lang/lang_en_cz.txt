@@ -14,7 +14,7 @@
 " of 4"
 " z 4"
 
-#MSG_MEASURE_BED_REFERENCE_HEIGHT_LINE2 c=14
+#MSG_BED_MEASURE_REFERENCE_HEIGHT_LINE2 c=14
 " of 9"
 " z 9"
 
@@ -190,7 +190,7 @@
 "Copy selected language?"
 "Kopirovat vybrany jazyk?"
 
-#MSG_CRASHDETECT c=13
+#MSG_CRASH_DETECT c=13
 "Crash det."
 "\x00"
 
@@ -238,7 +238,7 @@
 "E-correct:"
 "Korekce E:"
 
-#MSG_EJECT_FILAMENT c=17 r=1
+#MSG_FILAMENT_EJECT c=17 r=1
 "Eject filament"
 "Vysunout filament"
 
@@ -262,7 +262,7 @@
 "Error - static memory has been overwritten"
 "Chyba - Doslo k prepisu staticke pameti!"
 
-#MSG_CUT_FILAMENT c=16
+#MSG_FILAMENT_CUT c=16
 "Cut filament"
 "Ustrihnout"
 
@@ -422,7 +422,7 @@
 "howto.prusa3d.com"
 "\x00"
 
-#MSG_FILAMENTCHANGE
+#MSG_FILAMENT_CHANGE
 "Change filament"
 "Vymenit filament"
 
@@ -462,11 +462,11 @@
 "Checking Z axis  "
 "Kontrola osy Z"
 
-#MSG_CHOOSE_EXTRUDER c=20 r=1
+#MSG_EXTRUDER_CHOOSE c=20 r=1
 "Choose extruder:"
 "Vyberte extruder:"
 
-#MSG_CHOOSE_FILAMENT c=20 r=1
+#MSG_FILAMENT_CHOOSE c=20 r=1
 "Choose filament:"
 "Vyber filament:"
 
@@ -534,7 +534,7 @@
 "Insert the filament (do not load it) into the extruder and then press the knob."
 "Vlozte filament (nezavadejte) do extruderu a stisknete tlacitko"
 
-#MSG_LOAD_FILAMENT c=17
+#MSG_FILAMENT_LOAD c=17
 "Load filament"
 "Zavest filament"
 
@@ -542,7 +542,7 @@
 "Loading color"
 "Cisteni barvy"
 
-#MSG_LOADING_FILAMENT c=20
+#MSG_FILAMENT_LOADING c=20
 "Loading filament"
 "Zavadeni filamentu"
 
@@ -570,7 +570,7 @@
 "Level Dimmed"
 "\x00"
 
-#MSG_MEASURE_BED_REFERENCE_HEIGHT_LINE1 c=60
+#MSG_BED_MEASURE_REFERENCE_HEIGHT_LINE1 c=60
 "Measuring reference height of calibration point"
 "Merim referencni vysku kalibracniho bodu"
 
@@ -770,7 +770,7 @@
 "Please press the knob to unload filament"
 "Pro vysunuti filamentu stisknete prosim tlacitko"
 
-#MSG_PULL_OUT_FILAMENT c=20 r=4
+#MSG_FILAMENT_PULL_OUT c=20 r=4
 "Please pull out filament immediately"
 "Prosim vyjmete urychlene filament"
 
@@ -846,7 +846,7 @@
 "Print fan:"
 "Tiskovy vent.:"
 
-#MSG_CARD_MENU
+#MSG_SD_CARD_MENU
 "Print from SD"
 "Tisk z SD"
 
@@ -938,7 +938,7 @@
 "SD card"
 "\x00"
 
-#MSG_TOSHIBA_FLASH_AIR_COMPATIBILITY
+#MSG_SD_TOSHIBA_AIR
 "FlashAir"
 "\x00"
 
@@ -946,7 +946,7 @@
 "Right"
 "Vpravo"
 
-#MSG_FIND_BED_OFFSET_AND_SKEW_LINE1 c=60
+#MSG_BED_FIND_OFFSET_AND_SKEW_LINE1 c=60
 "Searching bed calibration point"
 "Hledam kalibracni bod podlozky"
 
@@ -1014,7 +1014,7 @@
 "Some files will not be sorted. Max. No. of files in 1 folder for sorting is 100."
 "Nektere soubory nebudou setrideny. Maximalni pocet souboru ve slozce pro setrideni je 100."
 
-#MSG_SORT
+#MSG_SD_SORT
 "Sort"
 "Trideni"
 
@@ -1022,7 +1022,7 @@
 "None"
 "Zadne"
 
-#MSG_SORT_TIME
+#MSG_SD_SORT_TIME
 "Time"
 "Cas"
 
@@ -1030,7 +1030,7 @@
 "Severe skew:"
 "Tezke zkoseni:"
 
-#MSG_SORT_ALPHA
+#MSG_SD_SORT_ALPHA
 "Alphabet"
 "Abeceda"
 
@@ -1162,11 +1162,11 @@
 "to unload filament"
 "k vyjmuti filamentu"
 
-#MSG_UNLOAD_FILAMENT c=17
+#MSG_FILAMENT_UNLOAD c=17
 "Unload filament"
 "Vyjmout filament"
 
-#MSG_UNLOADING_FILAMENT c=20 r=1
+#MSG_FILAMENT_UNLOADING c=20 r=1
 "Unloading filament"
 "Vysouvam filament"
 

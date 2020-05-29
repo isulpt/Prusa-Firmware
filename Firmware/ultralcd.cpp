@@ -2656,7 +2656,7 @@ void lcd_loading_filament() {
 
   lcd_set_cursor(0, 0);
 
-  lcd_puts_P(_T(MSG_LOADING_FILAMENT));
+  lcd_puts_P(_T(MSG_FILAMENT_LOADING));
   lcd_set_cursor(0, 2);
   lcd_puts_P(_T(MSG_PLEASE_WAIT));
 #ifdef SNMM
@@ -4927,7 +4927,7 @@ static void lcd_wizard_load()
 	}	
 	lcd_update_enable(false);
 	lcd_clear();
-	lcd_puts_at_P(0, 2, _T(MSG_LOADING_FILAMENT));
+	lcd_puts_at_P(0, 2, _T(MSG_FILAMENT_LOADING));
 #ifdef SNMM
 	change_extr(0);
 #endif
@@ -5318,10 +5318,10 @@ do\
         else MENU_ITEM_TOGGLE_P(_T(MSG_MODE), _T(MSG_STEALTH), lcd_silent_mode_set);\
         if (SilentModeMenu == SILENT_MODE_NORMAL)\
         {\
-            if (lcd_crash_detect_enabled()) MENU_ITEM_TOGGLE_P(_T(MSG_CRASHDETECT), _T(MSG_ON), crash_mode_switch);\
-            else MENU_ITEM_TOGGLE_P(_T(MSG_CRASHDETECT), _T(MSG_OFF), crash_mode_switch);\
+            if (lcd_crash_detect_enabled()) MENU_ITEM_TOGGLE_P(_T(MSG_CRASH_DETECT), _T(MSG_ON), crash_mode_switch);\
+            else MENU_ITEM_TOGGLE_P(_T(MSG_CRASH_DETECT), _T(MSG_OFF), crash_mode_switch);\
         }\
-        else MENU_ITEM_TOGGLE_P(_T(MSG_CRASHDETECT), NULL, lcd_crash_mode_info);\
+        else MENU_ITEM_TOGGLE_P(_T(MSG_CRASH_DETECT), NULL, lcd_crash_mode_info);\
     }\
 }\
 while (0)
@@ -5372,7 +5372,7 @@ while (0)
 do\
 {\
     if (card.ToshibaFlashAir_isEnabled())\
-        MENU_ITEM_TOGGLE_P(_T(MSG_SD_CARD), _T(MSG_TOSHIBA_FLASH_AIR_COMPATIBILITY), lcd_toshiba_flash_air_compatibility_toggle);\
+        MENU_ITEM_TOGGLE_P(_T(MSG_SD_CARD), _T(MSG_SD_TOSHIBA_AIR), lcd_toshiba_flash_air_compatibility_toggle);\
     else\
         MENU_ITEM_TOGGLE_P(_T(MSG_SD_CARD), _T(MSG_NORMAL), lcd_toshiba_flash_air_compatibility_toggle);\
 \
@@ -5382,9 +5382,9 @@ do\
         EEPROM_read(EEPROM_SD_SORT, (uint8_t*)&sdSort, sizeof(sdSort));\
         switch (sdSort)\
         {\
-          case SD_SORT_TIME: MENU_ITEM_TOGGLE_P(_T(MSG_SORT), _T(MSG_SORT_TIME), lcd_sort_type_set); break;\
-          case SD_SORT_ALPHA: MENU_ITEM_TOGGLE_P(_T(MSG_SORT), _T(MSG_SORT_ALPHA), lcd_sort_type_set); break;\
-          default: MENU_ITEM_TOGGLE_P(_T(MSG_SORT), _T(MSG_NONE), lcd_sort_type_set);\
+          case SD_SORT_TIME: MENU_ITEM_TOGGLE_P(_T(MSG_SD_SORT), _T(MSG_SD_SORT_TIME), lcd_sort_type_set); break;\
+          case SD_SORT_ALPHA: MENU_ITEM_TOGGLE_P(_T(MSG_SD_SORT), _T(MSG_SD_SORT_ALPHA), lcd_sort_type_set); break;\
+          default: MENU_ITEM_TOGGLE_P(_T(MSG_SD_SORT), _T(MSG_NONE), lcd_sort_type_set);\
         }\
     }\
 }\
@@ -5394,7 +5394,7 @@ while (0)
 do\
 {\
     if (card.ToshibaFlashAir_isEnabled())\
-        MENU_ITEM_TOGGLE_P(_T(MSG_SD_CARD), _T(MSG_TOSHIBA_FLASH_AIR_COMPATIBILITY), lcd_toshiba_flash_air_compatibility_toggle);\
+        MENU_ITEM_TOGGLE_P(_T(MSG_SD_CARD), _T(MSG_SD_TOSHIBA_AIR), lcd_toshiba_flash_air_compatibility_toggle);\
     else\
         MENU_ITEM_TOGGLE_P(_T(MSG_SD_CARD), _T(MSG_NORMAL), lcd_toshiba_flash_air_compatibility_toggle);\
 }\
@@ -5996,7 +5996,7 @@ void bowden_menu() {
 
 static char snmm_stop_print_menu() { //menu for choosing which filaments will be unloaded in stop print
 	lcd_clear();
-	lcd_puts_at_P(0,0,_T(MSG_UNLOAD_FILAMENT)); lcd_print(":");
+	lcd_puts_at_P(0,0,_T(MSG_FILAMENT_UNLOAD)); lcd_print(":");
 	lcd_set_cursor(0, 1); lcd_print(">");
 	lcd_puts_at_P(1,2,_i("Used during print"));////MSG_USED c=19 r=1
 	lcd_puts_at_P(1,3,_i("Current"));////MSG_CURRENT c=19 r=1
@@ -6259,14 +6259,14 @@ static void fil_load_menu()
     MENU_BEGIN();
     MENU_ITEM_BACK_P(_T(MSG_MAIN));
     MENU_ITEM_FUNCTION_P(_i("Load all"), load_all); ////MSG_LOAD_ALL c=17
-    MENU_ITEM_FUNCTION_NR_P(_T(MSG_LOAD_FILAMENT), '1', extr_adj, 0); ////MSG_LOAD_FILAMENT_1 c=16
-    MENU_ITEM_FUNCTION_NR_P(_T(MSG_LOAD_FILAMENT), '2', extr_adj, 1); ////MSG_LOAD_FILAMENT_2 c=17
-    MENU_ITEM_FUNCTION_NR_P(_T(MSG_LOAD_FILAMENT), '3', extr_adj, 2); ////MSG_LOAD_FILAMENT_3 c=17
-    MENU_ITEM_FUNCTION_NR_P(_T(MSG_LOAD_FILAMENT), '4', extr_adj, 3); ////MSG_LOAD_FILAMENT_4 c=17
+    MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_LOAD), '1', extr_adj, 0); ////MSG_FILAMENT_LOAD_1 c=16
+    MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_LOAD), '2', extr_adj, 1); ////MSG_FILAMENT_LOAD_2 c=17
+    MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_LOAD), '3', extr_adj, 2); ////MSG_FILAMENT_LOAD_3 c=17
+    MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_LOAD), '4', extr_adj, 3); ////MSG_FILAMENT_LOAD_4 c=17
 
     if (mmu_enabled)
     {
-        MENU_ITEM_FUNCTION_NR_P(_T(MSG_LOAD_FILAMENT), '5', extr_adj, 4);
+        MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_LOAD), '5', extr_adj, 4);
     }
     MENU_END();
 }
@@ -6277,11 +6277,11 @@ static void mmu_load_to_nozzle_menu()
     {
         MENU_BEGIN();
         MENU_ITEM_BACK_P(_T(MSG_MAIN));
-        MENU_ITEM_FUNCTION_NR_P(_T(MSG_LOAD_FILAMENT), '1', lcd_mmu_load_to_nozzle, 0);
-        MENU_ITEM_FUNCTION_NR_P(_T(MSG_LOAD_FILAMENT), '2', lcd_mmu_load_to_nozzle, 1);
-        MENU_ITEM_FUNCTION_NR_P(_T(MSG_LOAD_FILAMENT), '3', lcd_mmu_load_to_nozzle, 2);
-        MENU_ITEM_FUNCTION_NR_P(_T(MSG_LOAD_FILAMENT), '4', lcd_mmu_load_to_nozzle, 3);
-        MENU_ITEM_FUNCTION_NR_P(_T(MSG_LOAD_FILAMENT), '5', lcd_mmu_load_to_nozzle, 4);
+        MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_LOAD), '1', lcd_mmu_load_to_nozzle, 0);
+        MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_LOAD), '2', lcd_mmu_load_to_nozzle, 1);
+        MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_LOAD), '3', lcd_mmu_load_to_nozzle, 2);
+        MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_LOAD), '4', lcd_mmu_load_to_nozzle, 3);
+        MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_LOAD), '5', lcd_mmu_load_to_nozzle, 4);
         MENU_END();
     }
     else
@@ -6303,11 +6303,11 @@ static void mmu_fil_eject_menu()
     {
         MENU_BEGIN();
         MENU_ITEM_BACK_P(_T(MSG_MAIN));
-        MENU_ITEM_FUNCTION_NR_P(_T(MSG_EJECT_FILAMENT), '1', mmu_eject_filament, 0);
-        MENU_ITEM_FUNCTION_NR_P(_T(MSG_EJECT_FILAMENT), '2', mmu_eject_filament, 1);
-        MENU_ITEM_FUNCTION_NR_P(_T(MSG_EJECT_FILAMENT), '3', mmu_eject_filament, 2);
-        MENU_ITEM_FUNCTION_NR_P(_T(MSG_EJECT_FILAMENT), '4', mmu_eject_filament, 3);
-        MENU_ITEM_FUNCTION_NR_P(_T(MSG_EJECT_FILAMENT), '5', mmu_eject_filament, 4);
+        MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_EJECT), '1', mmu_eject_filament, 0);
+        MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_EJECT), '2', mmu_eject_filament, 1);
+        MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_EJECT), '3', mmu_eject_filament, 2);
+        MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_EJECT), '4', mmu_eject_filament, 3);
+        MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_EJECT), '5', mmu_eject_filament, 4);
         MENU_END();
     }
     else
@@ -6325,11 +6325,11 @@ static void mmu_cut_filament_menu()
     {
         MENU_BEGIN();
         MENU_ITEM_BACK_P(_T(MSG_MAIN));
-        MENU_ITEM_FUNCTION_NR_P(_T(MSG_CUT_FILAMENT), '1', mmu_cut_filament, 0);
-        MENU_ITEM_FUNCTION_NR_P(_T(MSG_CUT_FILAMENT), '2', mmu_cut_filament, 1);
-        MENU_ITEM_FUNCTION_NR_P(_T(MSG_CUT_FILAMENT), '3', mmu_cut_filament, 2);
-        MENU_ITEM_FUNCTION_NR_P(_T(MSG_CUT_FILAMENT), '4', mmu_cut_filament, 3);
-        MENU_ITEM_FUNCTION_NR_P(_T(MSG_CUT_FILAMENT), '5', mmu_cut_filament, 4);
+        MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_CUT), '1', mmu_cut_filament, 0);
+        MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_CUT), '2', mmu_cut_filament, 1);
+        MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_CUT), '3', mmu_cut_filament, 2);
+        MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_CUT), '4', mmu_cut_filament, 3);
+        MENU_ITEM_FUNCTION_NR_P(_T(MSG_FILAMENT_CUT), '5', mmu_cut_filament, 4);
         MENU_END();
     }
     else
@@ -6380,7 +6380,7 @@ static void change_extr_menu(){
 void unload_filament()
 {
 	custom_message_type = CustomMsg::FilamentLoading;
-	lcd_setstatuspgm(_T(MSG_UNLOADING_FILAMENT));
+	lcd_setstatuspgm(_T(MSG_FILAMENT_UNLOADING));
 
     raise_z_above(MIN_Z_FOR_UNLOAD);
 
@@ -6396,7 +6396,7 @@ void unload_filament()
 	plan_buffer_line_curposXYZE(1000 / 60, active_extruder);
 	st_synchronize();
 
-	lcd_display_message_fullscreen_P(_T(MSG_PULL_OUT_FILAMENT));
+	lcd_display_message_fullscreen_P(_T(MSG_FILAMENT_PULL_OUT));
 
 	//disable extruder steppers so filament can be removed
 	disable_e0();
@@ -6897,7 +6897,7 @@ static void lcd_main_menu()
 			//if (farm_mode) MENU_ITEM_SUBMENU_P(MSG_FARM_CARD_MENU, lcd_farm_sdcard_menu);
 			/*else*/ {
                         bMain=true;               // flag ('fake parameter') for 'lcd_sdcard_menu()' function
-                        MENU_ITEM_SUBMENU_P(_T(MSG_CARD_MENU), lcd_sdcard_menu);
+                        MENU_ITEM_SUBMENU_P(_T(MSG_SD_CARD_MENU), lcd_sdcard_menu);
                         }
 		}
 #if SDCARDDETECT < 1
@@ -6940,11 +6940,11 @@ static void lcd_main_menu()
   {
 	if (mmu_enabled)
 	{
-		MENU_ITEM_SUBMENU_P(_T(MSG_LOAD_FILAMENT), fil_load_menu);
+		MENU_ITEM_SUBMENU_P(_T(MSG_FILAMENT_LOAD), fil_load_menu);
 		MENU_ITEM_SUBMENU_P(_i("Load to nozzle"), mmu_load_to_nozzle_menu);
-//-//          MENU_ITEM_FUNCTION_P(_T(MSG_UNLOAD_FILAMENT), extr_unload);
+//-//          MENU_ITEM_FUNCTION_P(_T(MSG_FILAMENT_UNLOAD), extr_unload);
 //bFilamentFirstRun=true;
-          MENU_ITEM_SUBMENU_P(_T(MSG_UNLOAD_FILAMENT), mmu_unload_filament);
+          MENU_ITEM_SUBMENU_P(_T(MSG_FILAMENT_UNLOAD), mmu_unload_filament);
 		MENU_ITEM_SUBMENU_P(_i("Eject filament"), mmu_fil_eject_menu);
 #ifdef  MMU_HAS_CUTTER
         MENU_ITEM_SUBMENU_P(_i("Cut filament"), mmu_cut_filament_menu);
@@ -6953,7 +6953,7 @@ static void lcd_main_menu()
 	else
 	{
 #ifdef SNMM
-		MENU_ITEM_SUBMENU_P(_T(MSG_UNLOAD_FILAMENT), fil_unload_menu);
+		MENU_ITEM_SUBMENU_P(_T(MSG_FILAMENT_UNLOAD), fil_unload_menu);
 		MENU_ITEM_SUBMENU_P(_i("Change extruder"), change_extr_menu);////MSG_CHANGE_EXTR c=20 r=1
 #endif
 #ifdef FILAMENT_SENSOR
@@ -6963,10 +6963,10 @@ static void lcd_main_menu()
 #endif //FILAMENT_SENSOR
           {
                bFilamentFirstRun=true;
-			MENU_ITEM_SUBMENU_P(_T(MSG_LOAD_FILAMENT), lcd_LoadFilament);
+			MENU_ITEM_SUBMENU_P(_T(MSG_FILAMENT_LOAD), lcd_LoadFilament);
           }
           bFilamentFirstRun=true;
-		MENU_ITEM_SUBMENU_P(_T(MSG_UNLOAD_FILAMENT), lcd_unLoadFilament);
+		MENU_ITEM_SUBMENU_P(_T(MSG_FILAMENT_UNLOAD), lcd_unLoadFilament);
 	}
 	MENU_ITEM_SUBMENU_P(_T(MSG_SETTINGS), lcd_settings_menu);
     if(!isPrintPaused) MENU_ITEM_SUBMENU_P(_T(MSG_MENU_CALIBRATION), lcd_calibration_menu);
@@ -7127,7 +7127,7 @@ static void lcd_tune_menu()
 	MENU_ITEM_EDIT_advance_K();//7
 #endif
 #ifdef FILAMENTCHANGEENABLE
-	MENU_ITEM_FUNCTION_P(_T(MSG_FILAMENTCHANGE), lcd_colorprint_change);//8
+	MENU_ITEM_FUNCTION_P(_T(MSG_FILAMENT_CHANGE), lcd_colorprint_change);//8
 #endif
 
 #ifdef FILAMENT_SENSOR
@@ -7166,10 +7166,10 @@ static void lcd_tune_menu()
 
           if (SilentModeMenu == SILENT_MODE_NORMAL)
           {
-               if (lcd_crash_detect_enabled()) MENU_ITEM_TOGGLE_P(_T(MSG_CRASHDETECT), _T(MSG_ON), crash_mode_switch);
-               else MENU_ITEM_TOGGLE_P(_T(MSG_CRASHDETECT), _T(MSG_OFF), crash_mode_switch);
+               if (lcd_crash_detect_enabled()) MENU_ITEM_TOGGLE_P(_T(MSG_CRASH_DETECT), _T(MSG_ON), crash_mode_switch);
+               else MENU_ITEM_TOGGLE_P(_T(MSG_CRASH_DETECT), _T(MSG_OFF), crash_mode_switch);
           }
-          else MENU_ITEM_TOGGLE_P(_T(MSG_CRASHDETECT), NULL, lcd_crash_mode_info);
+          else MENU_ITEM_TOGGLE_P(_T(MSG_CRASH_DETECT), NULL, lcd_crash_mode_info);
      }
 #else //TMC2130
 	if (!farm_mode) { //dont show in menu if we are in farm mode
@@ -7457,7 +7457,7 @@ void lcd_sdcard_menu()
 		if (card.filenameIsDir)
 			MENU_ITEM_SDDIR(card.filename, card.longFilename);
 		else
-			MENU_ITEM_SDFILE(_T(MSG_CARD_MENU), card.filename, card.longFilename);
+			MENU_ITEM_SDFILE(_T(MSG_SD_CARD_MENU), card.filename, card.longFilename);
     } else {
       MENU_ITEM_DUMMY();
     }
@@ -8338,19 +8338,19 @@ static void lcd_selftest_error(TestError testError, const char *_error_1, const 
 		break;
 	case TestError::WiringFsensor:
 		lcd_set_cursor(0, 2);
-		lcd_puts_P(_T(MSG_SELFTEST_FILAMENT_SENSOR));
+		lcd_puts_P(_T(MSG_FSENSOR_LONG));
 		lcd_set_cursor(0, 3);
 		lcd_puts_P(_T(MSG_SELFTEST_WIRINGERROR));
 		break;
 	case TestError::TriggeringFsensor:
           lcd_set_cursor(0, 2);
-          lcd_puts_P(_T(MSG_SELFTEST_FILAMENT_SENSOR));
+          lcd_puts_P(_T(MSG_FSENSOR_LONG));
           lcd_set_cursor(0, 3);
           lcd_puts_P(_i("False triggering"));////c=20
           break;
 	case TestError::FsensorLevel:
           lcd_set_cursor(0, 2);
-          lcd_puts_P(_T(MSG_SELFTEST_FILAMENT_SENSOR));
+          lcd_puts_P(_T(MSG_FSENSOR_LONG));
           lcd_set_cursor(0, 3);
           lcd_printf_P(_i("%s level expected"),_error_1);////c=20
           break;
@@ -8692,7 +8692,7 @@ static int lcd_selftest_screen(TestScreen screen, int _progress, int _progress_s
 	}
 	else if (screen >= TestScreen::Fsensor && screen <= TestScreen::FsensorOk)
 	{
-		lcd_puts_at_P(0, 2, _T(MSG_SELFTEST_FILAMENT_SENSOR));
+		lcd_puts_at_P(0, 2, _T(MSG_FSENSOR_LONG));
 		lcd_putc(':');
 		lcd_set_cursor(18, 2);
 		(screen == TestScreen::Fsensor) ? lcd_print(_indicator) : lcd_print("OK");

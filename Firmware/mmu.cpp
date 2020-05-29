@@ -879,7 +879,7 @@ void mmu_M600_load_filament(bool automatic, float nozzle_temp)
     }
     lcd_update_enable(false);
     lcd_clear();
-    lcd_set_cursor(0, 1); lcd_puts_P(_T(MSG_LOADING_FILAMENT));
+    lcd_set_cursor(0, 1); lcd_puts_P(_T(MSG_FILAMENT_LOADING));
     lcd_print(" ");
     lcd_print(tmp_extruder + 1);
     snmm_filaments_used |= (1 << tmp_extruder); //for stop print
@@ -992,8 +992,8 @@ void extr_adj(uint8_t extruder) //loading filament for SNMM
 	
 	lcd_update_enable(false);
 	lcd_clear();
-	lcd_set_cursor(0, 1); lcd_puts_P(_T(MSG_LOADING_FILAMENT));
-	//if(strlen(_T(MSG_LOADING_FILAMENT))>18) lcd.setCursor(0, 1);
+	lcd_set_cursor(0, 1); lcd_puts_P(_T(MSG_FILAMENT_LOADING));
+	//if(strlen(_T(MSG_FILAMENT_LOADING))>18) lcd.setCursor(0, 1);
 	//else lcd.print(" ");
 	lcd_print(" ");
 	lcd_print(extruder + 1);
@@ -1033,8 +1033,8 @@ void extr_adj(uint8_t extruder) //loading filament for SNMM
 	//extr_mov(BOWDEN_LENGTH/2.f, 500);
 	extr_mov(bowden_length[extruder], 500);
 	lcd_clear();
-	lcd_set_cursor(0, 0); lcd_puts_P(_T(MSG_LOADING_FILAMENT));
-	if(strlen(_T(MSG_LOADING_FILAMENT))>18) lcd_set_cursor(0, 1);
+	lcd_set_cursor(0, 0); lcd_puts_P(_T(MSG_FILAMENT_LOADING));
+	if(strlen(_T(MSG_FILAMENT_LOADING))>18) lcd_set_cursor(0, 1);
 	else lcd_print(" ");
 	lcd_print(mmu_extruder + 1);
 	lcd_set_cursor(0, 2); lcd_puts_P(_T(MSG_PLEASE_WAIT));
@@ -1082,7 +1082,7 @@ void mmu_filament_ramming()
 void extr_unload_view()
 {
     lcd_clear();
-    lcd_set_cursor(0, 1); lcd_puts_P(_T(MSG_UNLOADING_FILAMENT));
+    lcd_set_cursor(0, 1); lcd_puts_P(_T(MSG_FILAMENT_UNLOADING));
     lcd_print(" ");
     if (mmu_extruder == MMU_FILAMENT_UNKNOWN) lcd_print(" ");
     else lcd_print(mmu_extruder + 1);
@@ -1115,7 +1115,7 @@ void extr_unload()
 		lcd_clear();
 		lcd_display_message_fullscreen_P(PSTR(""));
 		max_feedrate[E_AXIS] = 50;
-		lcd_set_cursor(0, 0); lcd_puts_P(_T(MSG_UNLOADING_FILAMENT));
+		lcd_set_cursor(0, 0); lcd_puts_P(_T(MSG_FILAMENT_UNLOADING));
 		lcd_print(" ");
 		lcd_print(mmu_extruder + 1);
 		lcd_set_cursor(0, 2); lcd_puts_P(_T(MSG_PLEASE_WAIT));
@@ -1351,7 +1351,7 @@ void lcd_mmu_load_to_nozzle(uint8_t filament_nr)
         lcd_update_enable(false);
         lcd_clear();
         lcd_set_cursor(0, 1);
-        lcd_puts_P(_T(MSG_LOADING_FILAMENT));
+        lcd_puts_P(_T(MSG_FILAMENT_LOADING));
         lcd_print(" ");
         lcd_print(tmp_extruder + 1);
         mmu_command(MmuCmd::T0 + tmp_extruder);
@@ -1363,7 +1363,7 @@ void lcd_mmu_load_to_nozzle(uint8_t filament_nr)
         load_filament_final_feed();
         st_synchronize();
         custom_message_type = CustomMsg::FilamentLoading;
-        lcd_setstatuspgm(_T(MSG_LOADING_FILAMENT));
+        lcd_setstatuspgm(_T(MSG_FILAMENT_LOADING));
         lcd_return_to_status();
         lcd_update_enable(true);
         lcd_load_filament_color_check();

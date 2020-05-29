@@ -10,7 +10,7 @@
 #MSG_IMPROVE_BED_OFFSET_AND_SKEW_LINE2 c=14
 " of 4"
 
-#MSG_MEASURE_BED_REFERENCE_HEIGHT_LINE2 c=14
+#MSG_BED_MEASURE_REFERENCE_HEIGHT_LINE2 c=14
 " of 9"
 
 #MSG_MEASURED_OFFSET
@@ -142,7 +142,7 @@
 #
 "Copy selected language?"
 
-#MSG_CRASHDETECT c=13
+#MSG_CRASH_DETECT c=13
 "Crash det."
 
 #
@@ -178,7 +178,7 @@
 #MSG_EXTRUDER_CORRECTION c=13
 "E-correct:"
 
-#MSG_EJECT_FILAMENT c=17 r=1
+#MSG_FILAMENT_EJECT c=17 r=1
 "Eject filament"
 
 #MSG_EJECTING_FILAMENT c=20 r=1
@@ -196,7 +196,7 @@
 #MSG_STACK_ERROR c=20 r=4
 "Error - static memory has been overwritten"
 
-#MSG_CUT_FILAMENT c=16
+#MSG_FILAMENT_CUT c=16
 "Cut filament"
 
 #MSG_CUTTER c=9
@@ -316,7 +316,7 @@
 #MSG_PRUSA3D_HOWTO
 "howto.prusa3d.com"
 
-#MSG_FILAMENTCHANGE
+#MSG_FILAMENT_CHANGE
 "Change filament"
 
 #MSG_CHANGE_SUCCESS
@@ -346,10 +346,10 @@
 #MSG_SELFTEST_CHECK_Z c=20
 "Checking Z axis  "
 
-#MSG_CHOOSE_EXTRUDER c=20 r=1
+#MSG_EXTRUDER_CHOOSE c=20 r=1
 "Choose extruder:"
 
-#MSG_CHOOSE_FILAMENT c=20 r=1
+#MSG_FILAMENT_CHOOSE c=20 r=1
 "Choose filament:"
 
 #MSG_FILAMENT c=17 r=1
@@ -400,13 +400,13 @@
 # c=20 r=6
 "Insert the filament (do not load it) into the extruder and then press the knob."
 
-#MSG_LOAD_FILAMENT c=17
+#MSG_FILAMENT_LOAD c=17
 "Load filament"
 
 #MSG_LOADING_COLOR
 "Loading color"
 
-#MSG_LOADING_FILAMENT c=20
+#MSG_FILAMENT_LOADING c=20
 "Loading filament"
 
 #MSG_LOOSE_PULLEY c=20 r=1
@@ -427,7 +427,7 @@
 #MSG_BL_LOW c=12
 "Level Dimmed"
 
-#MSG_MEASURE_BED_REFERENCE_HEIGHT_LINE1 c=60
+#MSG_BED_MEASURE_REFERENCE_HEIGHT_LINE1 c=60
 "Measuring reference height of calibration point"
 
 #MSG_MESH_BED_LEVELING
@@ -577,7 +577,7 @@
 #MSG_PRESS_TO_UNLOAD c=20 r=4
 "Please press the knob to unload filament"
 
-#MSG_PULL_OUT_FILAMENT c=20 r=4
+#MSG_FILAMENT_PULL_OUT c=20 r=4
 "Please pull out filament immediately"
 
 #MSG_EJECT_REMOVE c=20 r=4
@@ -634,7 +634,7 @@
 #MSG_SELFTEST_PRINT_FAN_SPEED c=18
 "Print fan:"
 
-#MSG_CARD_MENU
+#MSG_SD_CARD_MENU
 "Print from SD"
 
 #
@@ -703,13 +703,13 @@
 #MSG_SD_CARD
 "SD card"
 
-#MSG_TOSHIBA_FLASH_AIR_COMPATIBILITY
+#MSG_SD_TOSHIBA_AIR
 "FlashAir"
 
 #
 "Right"
 
-#MSG_FIND_BED_OFFSET_AND_SKEW_LINE1 c=60
+#MSG_BED_FIND_OFFSET_AND_SKEW_LINE1 c=60
 "Searching bed calibration point"
 
 #MSG_LANGUAGE_SELECT
@@ -760,19 +760,19 @@
 #MSG_FILE_CNT c=20 r=6
 "Some files will not be sorted. Max. No. of files in 1 folder for sorting is 100."
 
-#MSG_SORT
+#MSG_SD_SORT
 "Sort"
 
 #MSG_NONE
 "None"
 
-#MSG_SORT_TIME
+#MSG_SD_SORT_TIME
 "Time"
 
 #
 "Severe skew:"
 
-#MSG_SORT_ALPHA
+#MSG_SD_SORT_ALPHA
 "Alphabet"
 
 #MSG_SORTING c=20 r=1
@@ -871,10 +871,10 @@
 #
 "to unload filament"
 
-#MSG_UNLOAD_FILAMENT c=17
+#MSG_FILAMENT_UNLOAD c=17
 "Unload filament"
 
-#MSG_UNLOADING_FILAMENT c=20 r=1
+#MSG_FILAMENT_UNLOADING c=20 r=1
 "Unloading filament"
 
 #
